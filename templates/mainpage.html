@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title>My recipes</title>
+</head>
+<body class="container">
+    <header class= col-3>
+        <div>
+            <a href="index.html">
+                <img src="img/my-recipes.svg">
+            </a>
+        </div>
+        <nav class="topnav">
+            <ul>
+                <li><a href="bread.html" class="virkur"><span class="icon-bread"></span>bread</a></li>
+                <li><a href="#"><span class="bbq"></span>starters</a></li>
+                <li><a href="#"><span class="maincourse"></span>maincourse</a></li>
+                <li><a href="#"><span class="kefli"></span>dessert</a></li>
+                <li><a href="#"><span class="pacman"></span>glass</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %} {% endblock %}
+    
+</body>
+</html>

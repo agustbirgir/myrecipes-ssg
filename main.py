@@ -1,4 +1,5 @@
 import os
+import codecs
 from datetime import datetime
 from jinja2 import Environment, PackageLoader
 from markdown2 import markdown
@@ -15,15 +16,27 @@ POSTS = {
 }
 #template
 env = Environment(loader=PackageLoader('main', 'templates'))
-home_template = env.get_template('home.html')
+index_template = env.get_template('index.html')
+bread_template = env.get_template('bread.html')
 post_template = env.get_template('post.html')
+
+
+
 
 posts_metadata = [POSTS[post].metadata for post in POSTS]
 tags = [post['tags'] for post in posts_metadata]
-home_html = home_template.render(posts=posts_metadata, tags=tags)
+bread_html = bread_template.render(posts=posts_metadata, tags=tags)
 
-with open('../myrecipes/index.html', 'w') as file:
-    file.write(home_html)
+#forsiðan ( er ekki með MD post rendering)
+index_html = index_template.render()
+
+#forsiða
+with open('../myrecipez/index.html', 'w', encoding='utf-8') as file:
+    file.write(index_html)
+
+#brauðsiða
+with open('../myrecipez/bread.html', 'w') as file:
+    file.write(bread_html)    
 
 #uppskriftar
 for post in POSTS:
@@ -38,7 +51,7 @@ for post in POSTS:
 
     post_html = post_template.render(post=post_data)
 
-    post_file_path = '../myrecipes/posts/{slug}.html'.format(slug=post_metadata['slug'])
+    post_file_path = '../myrecipez/posts/{slug}.html'.format(slug=post_metadata['slug'])
 
     os.makedirs(os.path.dirname(post_file_path), exist_ok=True)
     with open(post_file_path, 'w') as file:

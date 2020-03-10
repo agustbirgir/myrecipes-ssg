@@ -1,0 +1,89 @@
+.container {
+  max-width: 80em;
+  margin: 0 auto;
+}
+
+.col-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2em;
+  margin: 2em;
+}
+
+.col-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.col-4 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+@media screen and (min-width: 37.5em) {
+  .col-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .col-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .splashlogo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: splashlogo;
+    width: 96%;
+  }
+  .kynning {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: kynning;
+  }
+  .auglysing {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: auglysing;
+    border: 1px dotted;
+    padding: 1em;
+    text-align: center;
+  }
+  .col-3-1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3.25fr 1fr;
+        grid-template-columns: 3.25fr 1fr;
+    grid-gap: 2em;
+        grid-template-areas: "splashlogo auglysing" "kynning    auglysing";
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .col-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+  .col-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+/*# sourceMappingURL=layout.css.map */
