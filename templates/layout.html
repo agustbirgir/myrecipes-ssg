@@ -9,11 +9,25 @@
     <link rel="stylesheet" href="../css/styles.min.css">
     <title>My Recipes</title>
 </head>
-<body class="container recipes">
-    {% include "header.html" %}
-    
+<body class="container">
+    <header class= col-3>
+        <div>
+            <a href="../index.html">
+                <img src="../img/my-recipes.svg">
+            </a>
+        </div>
+        <nav class="topnav">
+            <ul>
+                <li><a href="../bread.html" class="virkur"><span class="icon-bread"></span>bread</a></li>
+                <li><a href="#"><span class="icon-starters"></span>starters</a></li>
+                <li><a href="#"><span class="icon-maincourse"></span>maincourse</a></li>
+                <li><a href="#"><span class="icon-dessert"></span>dessert</a></li>
+                <li><a href="#"><span class="icon-glass"></span>glass</a></li>
+            </ul>
+        </nav>
+    </header>
     {% block content %} {% endblock %}
-
+    {% include 'socialbutts.html' %}
     <br>
 
 </body>

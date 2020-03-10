@@ -1,0 +1,252 @@
+@charset "UTF-8";
+body {
+  background-color: #EF8203;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+  max-width: 80em;
+  padding: 1em;
+}
+
+.mybutton {
+  background: #f7786b;
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.75em;
+  line-height: 1.5;
+  padding: .3em .9em;
+  border: 0;
+  border-radius: 0.4em;
+  font-size: .80em;
+}
+
+.button {
+  background: #0074d9;
+  color: #fff;
+  text-decoration: none;
+  margin: .3em 0;
+  font-size: 2em;
+  line-height: 1.5;
+  padding: .3em .9em;
+  border: .75em;
+  border-radius: 0.4em;
+  font-size: 1em;
+}
+
+.card {
+  background-color: #EAE4D8;
+  border: 0;
+  border-radius: .6em;
+  padding: 1em;
+  /* box shadow fyrir neðan */
+  -webkit-box-shadow: 10px -5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px -5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.stretch {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+}
+
+.recipes {
+  background-color: #B35702;
+}
+
+.container {
+  max-width: 80em;
+  margin: 0 auto;
+}
+
+.col-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2em;
+  margin: 2em;
+}
+
+.col-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.col-4 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+@media screen and (min-width: 37.5em) {
+  .col-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .col-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .splashlogo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: splashlogo;
+    width: 96%;
+  }
+  .kynning {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: kynning;
+  }
+  .auglysing {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: auglysing;
+    border: 1px dotted;
+    padding: 1em;
+    text-align: center;
+  }
+  .col-3-1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3.25fr 1fr;
+        grid-template-columns: 3.25fr 1fr;
+    grid-gap: 2em;
+        grid-template-areas: "splashlogo auglysing" "kynning    auglysing";
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .col-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+  .col-3 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+
+@font-face {
+  font-family: 'icomoon2';
+  src: url("../fonts/icomoon2.eot?8o9f9o");
+  src: url("../fonts/icomoon2.eot?8o9f9o#iefix") format("embedded-opentype"), url("../fonts/icomoon2.ttf?8o9f9o") format("truetype"), url("../fonts/icomoon2.woff?8o9f9o") format("woff"), url("../fonts/icomoon2.svg?8o9f9o#icomoon2") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon2' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-my-recipes .path1:before {
+  content: "\e905";
+  color: #f15b2b;
+}
+
+.icon-my-recipes .path2:before {
+  content: "\e906";
+  margin-left: -2.6201171875em;
+  color: #951a1d;
+}
+
+.icon-my-recipes .path3:before {
+  content: "\e907";
+  margin-left: -2.6201171875em;
+  color: #f15b2b;
+}
+
+.icon-my-recipes .path4:before {
+  content: "\e908";
+  margin-left: -2.6201171875em;
+  color: #951a1d;
+}
+
+.icon-my-recipes .path5:before {
+  content: "\e909";
+  margin-left: -2.6201171875em;
+  color: #f15b2b;
+}
+
+.icon-bbq:before {
+  content: "\e903";
+}
+
+.icon-kefli:before {
+  content: "\e904";
+}
+
+.icon-maincourse:before {
+  content: "\e902";
+}
+
+.icon-bread:before {
+  content: "\e900";
+}
+
+.icon-home:before {
+  content: "\e901";
+}
+
+.icon-pacman:before {
+  content: "\e916";
+}
+
+.icon-smile2:before {
+  content: "\e9e2";
+}
+
+.icon-terminal:before {
+  content: "\ea81";
+}
+
+.icon-facebook2:before {
+  content: "\ea91";
+}
+
+.icon-youtube:before {
+  content: "\ea9d";
+}
+
+.icon-behance2:before {
+  content: "\eaa9";
+}
+
+.icon-steam2:before {
+  content: "\eaad";
+}
+/*# sourceMappingURL=styles.css.map */

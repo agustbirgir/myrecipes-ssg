@@ -12,6 +12,11 @@
     display: grid;
     grid-template-columns: 1fr;
 }
+.col-4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
 @media screen and (min-width:37.5em){
     .col-2{
         display: grid;
@@ -22,9 +27,39 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .topmenu{
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+    }
+    .splashlogo{
+        grid-area: splashlogo;
+        width: 96%;
+    }
+    .kynning{
+        grid-area: kynning;
+    } 
+    .auglysing{
+        grid-area: auglysing;
+        border: 1px dotted;
+        padding: 1em;
+        text-align: center;
+    }
+    .col-3-1{
+        display: grid;
+        grid-template-columns: 3.25fr 1fr;
+        grid-gap:2em ;
+        grid-template-areas: 
+            "splashlogo auglysing"
+            "kynning    auglysing";
+    }
 }
-
 @media screen and (min-width:60em){
+    .topmenu{
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+    }
     .col-2 {
         display: grid;
         grid-template-columns: 1fr 1fr ;
